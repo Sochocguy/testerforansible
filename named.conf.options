@@ -1,0 +1,13 @@
+acl goodclients {
+	localhosts;
+    	localnets;
+};
+
+options {
+    	directory "/var/cache/bind" 
+	recursion yes;
+	allow-query { goodclients };
+
+	auth-nxdomain no;
+	listen-on-i6 { any; };
+};
