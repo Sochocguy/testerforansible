@@ -4,7 +4,7 @@ acl goodclients {
 };
 
 options {
-    	directory "/var/cache/bind" 
+    	directory "/var/cache/bind"; 
 	recursion yes;
 	allow-query { goodclients };
 
