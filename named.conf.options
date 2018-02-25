@@ -6,7 +6,7 @@ acl goodclients {
 options {
     	directory "/var/cache/bind"; 
 	recursion yes;
-	allow-query { goodclients };
+	allow-query { goodclients; };
 	
 	dnssec-validation auto;
 	
