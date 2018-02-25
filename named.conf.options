@@ -1,5 +1,5 @@
 acl goodclients {
-	localhosts;
+	localhost;
     	localnets;
 };
 
@@ -7,7 +7,9 @@ options {
     	directory "/var/cache/bind"; 
 	recursion yes;
 	allow-query { goodclients };
-
+	
+	dnssec-validation auto;
+	
 	auth-nxdomain no;
-	listen-on-i6 { any; };
+	listen-on-v6 { any; };
 };
